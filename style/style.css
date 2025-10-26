@@ -6,18 +6,26 @@
 
 body {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     justify-content: center;
     align-items: center;
     background-color: red;
+    gap: 10px;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bot-container {
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     background-color: green;
 }
 
@@ -31,5 +39,14 @@ body {
 #item {
     outline: 1px black solid;
     background-color: blueviolet;
+    flex: 1;
+}
+
+.top-container {
+    display: flex;
+    gap: 10px;
+}
+
+#input {
     flex: 1;
 }
