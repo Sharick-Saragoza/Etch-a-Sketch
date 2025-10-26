@@ -1,8 +1,15 @@
 const botContainer = document.querySelector(".bot-container");
 const input = document.getElementById("input");
 const createButton = document.getElementById("create-button");
+const resetButton = document.getElementById("reset-button");
 
 createButton.addEventListener("click", (amount) => {
+
+    resetButton.addEventListener("click", () => {
+        while (botContainer.hasChildNodes()) {
+            botContainer.removeChild(botContainer.firstChild);
+        }
+    });
 
     while (botContainer.hasChildNodes()) {
         botContainer.removeChild(botContainer.firstChild);
@@ -39,3 +46,4 @@ createButton.addEventListener("click", (amount) => {
 
     input.value = "";
 });
+
