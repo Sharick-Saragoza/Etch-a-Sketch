@@ -28,7 +28,7 @@ body {
     display: flex;
 }
 
-.item {
+#item {
     outline: 1px black solid;
     background-color: blueviolet;
     flex: 1;
