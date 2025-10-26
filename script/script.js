@@ -1,4 +1,4 @@
-const botContainer = document.querySelector(".bot-container"); 
+const botContainer = document.querySelector(".bot-container");
 const input = document.getElementById("input");
 const createButton = document.getElementById("create-button");
 
@@ -10,24 +10,32 @@ createButton.addEventListener("click", (amount) => {
 
     amount = input.value;
 
-    for (let i = 1; i <= amount; i++) {
-        // Creates AMOUNT of rows.
-        const newRow = document.createElement("div");
-        newRow.className = "row";
-        const row = document.querySelector(".row");
-        botContainer.appendChild(newRow);
-
+    if (input.value > 100) {
+        alert("Amount too high.")
+    } else if (input.value <= 0) {
+        alert("Amount too low.");
+    } else {
         for (let i = 1; i <= amount; i++) {
-            // Creates AMOUNT of items inside ONE row. 
-            const newItem = document.createElement("div");
-            newItem.setAttribute("id", "item");
+            // Creates AMOUNT of rows.
+            const newRow = document.createElement("div");
+            newRow.className = "row";
+            const row = document.querySelector(".row");
+            botContainer.appendChild(newRow);
 
-            // Makes the item black when you hover over it.
-            newItem.addEventListener("mouseover", () => {
-                newItem.style.backgroundColor = "black";
-            });
+            for (let i = 1; i <= amount; i++) {
+                // Creates AMOUNT of items inside ONE row. 
+                const newItem = document.createElement("div");
+                newItem.setAttribute("id", "item");
 
-            newRow.appendChild(newItem);
+                // Makes the item black when you hover over it.
+                newItem.addEventListener("mouseover", () => {
+                    newItem.style.backgroundColor = "black";
+                });
+
+                newRow.appendChild(newItem);
+            }
         }
     }
+
+    input.value = "";
 });
