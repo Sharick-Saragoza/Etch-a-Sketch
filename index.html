@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
     <script defer src="script/script.js"></script>
     <title>Etch a Sketch</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-    <div class="top-container">
-        <input id="input" type="number" placeholder="number of squares between 0 and 100">
-        <button id="create-button">Create board</button>
-        <button id="reset-button">Reset</button>
+      <div class="top-container">
+        <input id="input" type="number" placeholder="number of squares between 0 and 100"/>
+        <div class="top-buttons">
+          <button id="create-button">Create board</button>
+          <button id="black-button">Black</button>
+          <button id="rainbow-button">Rainbow</button>
+          <button id="reset-button">Reset</button>
+        </div>
+      </div>
+      <div class="bot-container"></div>
     </div>
-    <div class="bot-container"></div>
-    </div>
-</body>
-
+  </body>
 </html>
